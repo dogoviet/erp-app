@@ -47,27 +47,31 @@ SitemapGenerator::Sitemap.create do
   # add "dang-ky-nhan-tin.html"
 
   # product link
-  Erp::Products::Product.get_active.each do |product|
-    add product_detail_path(product_id: product.id, title: url_friendly(product.product_name))
+  Erp::Products::Product.all.each do |product|
+    add product_detail_path(product_id: product.id, title: product.alias)
+  end
+
+  Erp::Products::Product.all.each do |product|
+    add all_property_path(product_id: product.id, title: product.alias)
   end
 
   # menu link
-  Erp::Menus::Menu.get_active.each do |menu|
+  Erp::Menus::Menu.all.each do |menu|
     add category_path(menu_id: menu.id, title: url_friendly(menu.name))
   end
 
   # article link
-  Erp::Articles::Article.get_active.each do |article|
+  Erp::Articles::Article.all.each do |article|
     add blog_detail_path(article.id, title:  url_friendly(article.name))
   end
 
   # event link
-  Erp::Products::Event.events_active.each do |event|
+  Erp::Products::Event.all.each do |event|
     add event_detail_path(event_id: event.id, title: url_friendly(event.name))
   end
 
   # brand link
-  Erp::Products::Brand.get_active.each do |brand|
+  Erp::Products::Brand.all.each do |brand|
     add brand_detail_path(brand_id: brand.id, title: url_friendly(brand.name))
   end
 end
