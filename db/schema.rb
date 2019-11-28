@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190708144414) do
+ActiveRecord::Schema.define(version: 20191123034219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -850,6 +850,9 @@ ActiveRecord::Schema.define(version: 20190708144414) do
     t.integer "cache_stock"
     t.boolean "is_call", default: false
     t.text "specs"
+    t.string "dimentions"
+    t.string "weights"
+    t.string "warranty"
     t.index ["accessory_id"], name: "index_erp_products_products_on_accessory_id"
     t.index ["brand_id"], name: "index_erp_products_products_on_brand_id"
     t.index ["category_id"], name: "index_erp_products_products_on_category_id"
@@ -909,6 +912,7 @@ ActiveRecord::Schema.define(version: 20190708144414) do
     t.boolean "is_show_detail"
     t.integer "custom_order", default: 0
     t.boolean "is_show_website", default: false
+    t.boolean "is_meta_description", default: false
     t.index ["creator_id"], name: "index_erp_products_properties_on_creator_id"
     t.index ["property_group_id"], name: "index_erp_products_properties_on_property_group_id"
   end
@@ -917,6 +921,7 @@ ActiveRecord::Schema.define(version: 20190708144414) do
     t.integer "property_id"
     t.string "value"
     t.boolean "is_show_website", default: false
+    t.integer "custom_order", default: 0
     t.index ["property_id"], name: "index_erp_products_properties_values_on_property_id"
   end
 
@@ -928,6 +933,7 @@ ActiveRecord::Schema.define(version: 20190708144414) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "custom_order", default: 0
+    t.string "show_name"
     t.index ["creator_id"], name: "index_erp_products_property_groups_on_creator_id"
   end
 

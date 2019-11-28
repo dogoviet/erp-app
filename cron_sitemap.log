@@ -1,18 +1,8 @@
-/usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/bundler/resolver.rb:289:in `block in verify_gemfile_dependencies_are_found!': Could not find gem 'rails (~> 5.1.2)' in any of the gem sources listed in your Gemfile. (Bundler::GemNotFound)
-	from /usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/bundler/resolver.rb:257:in `each'
-	from /usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/bundler/resolver.rb:257:in `verify_gemfile_dependencies_are_found!'
-	from /usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/bundler/resolver.rb:48:in `start'
-	from /usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/bundler/resolver.rb:22:in `resolve'
-	from /usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/bundler/definition.rb:258:in `resolve'
-	from /usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/bundler/definition.rb:171:in `specs'
-	from /usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/bundler/definition.rb:238:in `specs_for'
-	from /usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/bundler/definition.rb:227:in `requested_specs'
-	from /usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/bundler/runtime.rb:108:in `block in definition_method'
-	from /usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/bundler/runtime.rb:20:in `setup'
-	from /usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/bundler.rb:107:in `setup'
-	from /usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/bundler/setup.rb:20:in `<top (required)>'
-	from /usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:59:in `require'
-	from /usr/local/rvm/rubies/ruby-2.3.3/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:59:in `require'
-	from /home/timhangcongnghe/prod/config/boot.rb:3:in `<top (required)>'
-	from bin/rails:3:in `require_relative'
-	from bin/rails:3:in `<main>'
+Association Tracking for PaperTrail has been extracted to a separate gem. To use it, please add `paper_trail-association_tracking` to your Gemfile. If you don't use it (most people don't, that's the default) and you set `track_associations = false` somewhere (probably a rails initializer) you can remove that line now.
+In '/home/timhangcongnghe/prod/public/':
++ sitemap.xml.gz                                        9084 links /     185 KB
+Sitemap stats: 9,084 links / 1 sitemaps / 0m06s
+
+Pinging with URL 'http://timhangcongnghe.com/sitemap.xml.gz':
+  Successful ping of Google
+  Successful ping of Bing
